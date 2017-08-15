@@ -1,0 +1,3 @@
+rootProject.name = 'mobileDoorstep'
+
+include ':app'
