@@ -5,6 +5,7 @@ import { StackNavigator } from 'react-navigation';
 import { Text, View } from 'react-native';
 import LoginScreen from '../pages/LoginScreen';
 import RegisterScreen from '../pages/RegisterScreen';
+import UserProfile from '../pages/UserProfile';
 
 const Navigator = StackNavigator({
   Login: {
@@ -12,15 +13,18 @@ const Navigator = StackNavigator({
   },
   Register: {
     screen: RegisterScreen
+  },
+  UserProfile: {
+    screen: UserProfile
   }
 }, {
-  initialRouteName: 'Login'
+  initialRouteName: 'UserProfile'
 })
 
 export default function RootContainer({ store }) {
   return (
     <Provider store={store}>
-      <View style={{flex: 1, backgroundColor: 'blue'}}>
+      <View style={{flex: 1}}>
           <Navigator />
       </View>
     </Provider>
