@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { Provider } from 'react-redux';
 import { StackNavigator } from 'react-navigation';
-import { View } from 'react-native';
+import { Text, View } from 'react-native';
 import LoginScreen from '../pages/LoginScreen';
 import RegisterScreen from '../pages/RegisterScreen';
 
@@ -20,7 +20,7 @@ const Navigator = StackNavigator({
 export default function RootContainer({ store }) {
   return (
     <Provider store={store}>
-      <View>
+      <View style={{flex: 1, backgroundColor: 'blue'}}>
           <Navigator />
       </View>
     </Provider>

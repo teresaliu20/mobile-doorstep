@@ -15,8 +15,8 @@ const store = configureStore();
 export default class mobileDoorstep extends Component {
   render() {
     return (
-      <View>
-        <RootContainer store={store}/>
+      <View style={{flex: 1}}>
+        <RootContainer store={store} />
       </View>
     );
   }
