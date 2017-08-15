@@ -14,6 +14,9 @@ import {
 } from 'react-native';
 import styles from '../assets/stylesheets/loginStyles.js';
 import Radium from 'radium';
+import { connect } from 'react-redux';
+
+import { saveUser } from '../actions/saveUser';
 
 class LoginScreen extends React.Component {
   constructor(props) {
@@ -24,7 +27,8 @@ class LoginScreen extends React.Component {
     }
   }
   loginUser(username, password) {
-
+    this.props.onSuccessfulLogin(username, password);
+    console.log("SUCCESSFUL LOGIN YO");
   }
   render() {
     return (
@@ -54,10 +58,26 @@ class LoginScreen extends React.Component {
           <TouchableOpacity style={[styles.button, styles.red]} onPress={ () => this.props.navigation.navigate( 'Register', { admin: false } ) }>
               <Text style={[styles.buttonLabel, {fontFamily: 'Avenir'}]}>Register User</Text>
           </TouchableOpacity>
-        </View>  
+        </View>
       </View>
     )
   }
 }
 
-export default Radium(LoginScreen);
+const mapStateToProps = ( state ) => {
+  return {
+    user: state.user.user
+  }
+}
+
+const mapDispatchToProps = ( dispatch ) => {
+  return {
+    onSuccessfulLogin: ( username, password ) => {
+      dispatch(saveUser(username, password));
+    }
+  }
+}
+
+export default connect(
+  mapStateToProps, mapDispatchToProps
+)(Radium(LoginScreen));

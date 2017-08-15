@@ -16,6 +16,7 @@ export default class mobileDoorstep extends Component {
   render() {
     return (
       <View style={{flex: 1}}>
+
         <RootContainer store={store} />
       </View>
     );
