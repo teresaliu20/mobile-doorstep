@@ -1,4 +1,5 @@
 import React from 'react';
+import Reactotron from 'reactotron';
 import {
   StyleSheet,
   View,
@@ -28,9 +29,11 @@ class LoginScreen extends React.Component {
   }
   loginUser(username, password) {
     this.props.onSuccessfulLogin(username, password);
-    console.log("SUCCESSFUL LOGIN YO");
+    Reactotron.log("SUCCESSFUL LOGIN YO");
+    this.props.navigation.navigate( 'UserProfile', { admin: false } )
   }
   render() {
+    Reactotron.log("HELLO");
     return (
       <View style={styles.container}>
         <Text style={styles.title}>Welcome to Doorstep</Text>

@@ -1,6 +1,6 @@
 import Types from './actionTypes';
 import axios from 'axios';
-import { domain } from '../domain';
+import domain from '../domain';
 
 export function saveUser(username, password) {
   return dispatch => {

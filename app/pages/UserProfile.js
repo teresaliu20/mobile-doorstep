@@ -1,4 +1,6 @@
 import React from 'react';
+import Reactotron from 'reactotron';
+import { connect } from 'react-redux';
 import {
   View,
   Text,
@@ -16,30 +18,25 @@ class UserProfile extends React.Component {
   constructor(props) {
     super(props)
   }
-  componentDidMount() {
-
+  componentWillMount() {
+    Reactotron.log("USER UP AND RUNNING", this.props.user);
   }
   render() {
+    const user = this.props.user;
     return (
       <ScrollView style={styles.container}>
         <View style={styles.splash}>
-          <Text style={styles.name}>INSERT NAME</Text>
+          <Text style={styles.name}>{user.fName + ' ' + user.lName}</Text>
         </View>
         <View style={styles.userInfo}>
-          <Text style={styles.userDescription}>Description</Text>
+          <Text style={styles.userDescription}>{user.aboutMe}</Text>
           <View style={styles.statBox}>
-            <View style={styles.stat}>
-              <Text style={styles.statNumber}>4</Text>
-              <Text style={styles.statDescription}>Given</Text>
-            </View>
-            <View style={styles.stat}>
-              <Text style={styles.statNumber}>4</Text>
-              <Text style={styles.statDescription}>Given</Text>
-            </View>
-            <View style={styles.stat}>
-              <Text style={styles.statNumber}>4</Text>
-              <Text style={styles.statDescription}>Given</Text>
-            </View>
+            {/* {user.stats.map((stat, index) =>
+              <View style={styles.stat}>
+                <Text style={styles.statNumber}>{stat}</Text>
+                <Text style={styles.statDescription}>Given</Text>
+              </View>
+            )} */}
           </View>
         </View>
         <View style={styles.commmunityList}>
@@ -52,4 +49,12 @@ class UserProfile extends React.Component {
   }
 }
 
-export default UserProfile;
+const mapStateToProps = ( state ) => {
+  return {
+    user: state.user.user
+  }
+}
+
+export default connect(
+  mapStateToProps
+)(UserProfile);

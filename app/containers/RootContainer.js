@@ -18,7 +18,7 @@ const Navigator = StackNavigator({
     screen: UserProfile
   }
 }, {
-  initialRouteName: 'UserProfile'
+  initialRouteName: 'Login'
 })
 
 export default function RootContainer({ store }) {
