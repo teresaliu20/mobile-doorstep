@@ -2,12 +2,12 @@
 import { StackNavigator } from 'react-navigation'
 
 // Screens
-import TabThreeScreenOne from './views/TabThreeScreenOne'
+import SearchCommunities from './views/SearchCommunities'
 import TabThreeScreenTwo from './views/TabThreeScreenTwo'
 import TabThreeScreenThree from './views/TabThreeScreenThree'
 
 const routeConfiguration = {
-  TabThreeScreenOne: { screen: TabThreeScreenOne },
+  TabThreeScreenOne: { screen: SearchCommunities },
   TabThreeScreenTwo: { screen: TabThreeScreenTwo },
   TabThreeScreenThree: { screen: TabThreeScreenThree },
 
