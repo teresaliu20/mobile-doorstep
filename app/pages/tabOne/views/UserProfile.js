@@ -1,3 +1,5 @@
+'use strict';
+
 import React from 'react';
 import Reactotron from 'reactotron';
 import { connect } from 'react-redux';
@@ -11,8 +13,8 @@ import {
   Image,
   ScrollView
 } from 'react-native';
-import styles from '../assets/stylesheets/userProfileStyles.js';
-import Door from '../components/Door';
+import styles from '../../../assets/stylesheets/userProfileStyles.js';
+import Door from '../../../components/Door';
 
 class UserProfile extends React.Component {
   constructor(props) {

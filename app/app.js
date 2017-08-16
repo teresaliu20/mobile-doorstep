@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import {
   StyleSheet,
   Text,
@@ -12,7 +12,7 @@ const store = configureStore();
 
 // persistStore(store);
 
-export default class mobileDoorstep extends Component {
+export default class mobileDoorstep extends React.Component {
   render() {
     return (
       <View style={{flex: 1}}>
