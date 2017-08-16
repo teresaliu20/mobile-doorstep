@@ -37,13 +37,27 @@ class CommunityMarket extends React.Component {
         </View>
         <View style={styles.marketItemsView}>
           <Text style={styles.marketItemsLabel}>Market Items</Text>
-          <Item />
-          <Item />
+          <View style={styles.itemsWrapper}>
+            <Item />
+            <Item />
+            <Item />
+            <Item />
+            <Item />
+            <Item />
+            <Item />
+          </View>
         </View>
         <View style={styles.userItemsView}>
           <Text style={styles.userItemsLabel}>Your Items</Text>
-          <Item />
-          <Item />
+          <View style={styles.itemsWrapper}>
+            <Item />
+            <Item />
+            <Item />
+            <Item />
+            <Item />
+            <Item />
+            <Item />
+          </View>
         </View>
       </ScrollView>
     )

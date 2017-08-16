@@ -57,6 +57,11 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontWeight: 'bold',
     padding: 10
+  },
+  itemsWrapper: {
+    display: 'flex',
+    flexDirection: 'row',
+    flexWrap: 'wrap'
   }
 });
 
