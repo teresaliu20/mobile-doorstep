@@ -1,3 +1,5 @@
+'use strict';
+
 import React from 'react';
 import {
   View,
@@ -9,8 +11,8 @@ import {
   Image,
   ScrollView
 } from 'react-native';
-import styles from '../assets/stylesheets/userProfileStyles.js';
-import Door from '../components/Door';
+import styles from '../../../assets/stylesheets/userProfileStyles.js';
+import Door from '../../../components/Door';
 
 class UserProfile extends React.Component {
   constructor(props) {
