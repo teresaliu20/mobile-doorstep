@@ -21,7 +21,6 @@ class TabBarNavigation extends React.Component {
     const { dispatch, navigationState } = this.props
     return (
       <View style={{flex: 1}}>
-      <Text>Hello again!</Text>
       <TabBar
         navigation={
           addNavigationHelpers({

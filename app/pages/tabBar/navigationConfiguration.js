@@ -16,11 +16,11 @@ const tabBarConfiguration = {
   //...other configs
 tabBarOptions:{
     // tint color is passed to text and icons (if enabled) on the tab bar
-    activeTintColor: 'white',
-    inactiveTintColor: 'blue',
-// background color is for the tab component
-    activeBackgroundColor: 'blue',
-    inactiveBackgroundColor: 'white',
+    activeTintColor: '#8B8B8B',
+    inactiveTintColor: '#999999',
+    // background color is for the tab component
+    activeBackgroundColor: '#F4F4F4',
+    inactiveBackgroundColor: 'white'
   }
 }
 

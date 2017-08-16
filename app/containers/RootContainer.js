@@ -5,7 +5,6 @@ import { StackNavigator } from 'react-navigation';
 import { Text, View } from 'react-native';
 import LoginScreen from '../pages/LoginScreen';
 import RegisterScreen from '../pages/RegisterScreen';
-import UserProfile from '../pages/UserProfile';
 import MainApp from '../pages/MainApp';
 
 const Navigator = StackNavigator({
